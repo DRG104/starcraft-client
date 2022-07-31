@@ -1,11 +1,22 @@
+import UnitsIndex from "./units/UnitsIndex"
+
 const Home = (props) => {
 	// const { msgAlert, user } = props
-	console.log('props in home', props)
+	// console.log('props in home', props)
+
+	const { msgAlert } = props
 
 	return (
-		<>
-			<h2>Home Page</h2>
-		</>
+		<div>
+			<h2 
+				style={{
+					textAlign: 'center',
+				}}
+			>
+				Ki Nala Atum
+			</h2>
+			<UnitsIndex msgAlert={ msgAlert } />
+		</div>
 	)
 }
 

@@ -12,6 +12,7 @@ import SignUp from './components/auth/SignUp'
 import SignIn from './components/auth/SignIn'
 import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
+import ShowUnit from './components/units/showUnit'
 
 const App = () => {
 
@@ -92,6 +93,13 @@ const App = () => {
 								/>
 							</RequireAuth>}
 					/>
+					<Route
+					path='/units/:id'
+					element={<ShowUnit 
+						msgAlert={msgAlert}
+						/>
+					}
+				/>
 				</Routes>
 				
 			{msgAlerts.map((msgAlert) => (

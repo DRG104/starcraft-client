@@ -1,6 +1,6 @@
-# Pets App Client
+# Units App Client
 
-This is a client for our pets app. It will allow users to see, and create new pets, as well as edit them, and add toys for their pets.
+This is a client for our Units app. It will allow users to see, and create new Units, as well as edit them, and add toys for their Units.
 
 ## User Stories
 
@@ -10,11 +10,11 @@ This is a client for our pets app. It will allow users to see, and create new pe
 * I want to be able to sign in.
 * I want to be able to sign out.
 * I want to be able to change my password
-* I want to be able to see all pets.
+* I want to be able to see all Units.
 * I want to be able to see information about a specific pet.
 * I want to be able to create a new pet.
-* I want to be able to update my pets.
-* I want to be able to delete my pets.
+* I want to be able to update my Units.
+* I want to be able to delete my Units.
 * I want to be able to create a toy.
 * I want to be able to give toys to any pet.
 * I want to be able to update my pet's toys.
