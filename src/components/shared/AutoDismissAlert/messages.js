@@ -7,6 +7,12 @@ const messages = {
 	changePasswordSuccess: 'Password changed successfully!',
 	changePasswordFailure:'Failed to change passwords. Check your old password and try again.',
 	getUnitsFailure: 'Error fetching units.',
+	createUnitSuccess: 'Unit warped in successfully!',
+	createUnitFailure: 'Something went wrong, construct additional pylons.',
+	updateUnitSuccess: 'Unit updated successfully!!',
+	updateUnitFailure: 'Couldn\'t update unit, please try again.',
+	removeUnitSuccess: 'Unit has been destroyed!',
+	removeUnitFailure: 'Couldn\'t remove unit, please try again.',
 }
 
 module.exports = messages

@@ -12,7 +12,8 @@ import SignUp from './components/auth/SignUp'
 import SignIn from './components/auth/SignIn'
 import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
-import ShowUnit from './components/units/showUnit'
+import ShowUnit from './components/units/ShowUnit'
+import CreateUnit from './components/units/CreateUnit'
 
 const App = () => {
 
@@ -94,24 +95,34 @@ const App = () => {
 							</RequireAuth>}
 					/>
 					<Route
-					path='/units/:id'
-					element={<ShowUnit 
-						msgAlert={msgAlert}
-						/>
-					}
-				/>
+						path='/units/:id'
+						element={<ShowUnit 
+							msgAlert={msgAlert}
+							/>
+						}
+					/>
+					<Route
+					path='/addUnit'
+						element={
+							<RequireAuth user={user}>
+							<CreateUnit 
+								msgAlert={msgAlert}
+								user={user}
+							/>
+							</RequireAuth>
+						}
+					/>
 				</Routes>
-				
-			{msgAlerts.map((msgAlert) => (
-				<AutoDismissAlert
-					key={msgAlert.id}
-					heading={msgAlert.heading}
-					variant={msgAlert.variant}
-					message={msgAlert.message}
-					id={msgAlert.id}
-					deleteAlert={deleteAlert}
-				/>
-			))}
+					{msgAlerts.map((msgAlert) => (
+						<AutoDismissAlert
+							key={msgAlert.id}
+							heading={msgAlert.heading}
+							variant={msgAlert.variant}
+							message={msgAlert.message}
+							id={msgAlert.id}
+							deleteAlert={deleteAlert}
+						/>
+					))}
 		</Fragment>
 	)
 }

@@ -56,7 +56,7 @@ const UnitsIndex = (props) => {
                 </Card.Header>
                     <Card.Body>
                         <Card.Text>
-                            <Link to={`/units/${unit.id}`}>Vew {unit.name}</Link>
+                            <Link to={`/units/${unit.id}`}>Vew {unit.Name}</Link>
                         </Card.Text>
                     </Card.Body>
         </Card>

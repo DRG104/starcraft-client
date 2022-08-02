@@ -17,12 +17,12 @@ const ShowUnit = (props) => {
         getOneUnit(id)
             .then(res => setUnit(res.data.unit))
             .catch(err => {
-                navigate('/')
                 msgAlert({
                     heading: 'Error: no units available!',
                     message: messages.getUnitsFailure,
                     variant: 'danger'
                 })
+                navigate('/')
             })
     }, [])
 
@@ -31,22 +31,32 @@ const ShowUnit = (props) => {
     }
 
     return (
-        <Container className="fluid">
-            <Card>
-                <Card.Header>{unit.Name}</Card.Header>
-                <Card.Body>
-                    <Card.Text>
-                        <div><small>Cost: {unit.Cost}</small></div>
-                        <div><small>Tier: {unit.Tier}</small></div>
-                        <div><small>Produced at: {unit.Produced}</small></div>
-                        <div><small>Targets: {unit.Targets}</small></div>
-                        <div><small>{unit.Alive ? 'Alive' : 'Dead'}</small></div>
-                        <div><small>Status: {unit.Status}</small></div>
-                        {/* ask how to display subdoc here */}
-                    </Card.Text>
-                </Card.Body>
-            </Card>
-        </Container>
+        <>
+            <Container className="fluid">
+                <Card>
+                    <Card.Header>{unit.Name}</Card.Header>
+                    <Card.Body>
+                        <Card.Text>
+                            <div><small>Cost: {unit.Cost}</small></div>
+                            <div><small>Tier: {unit.Tier}</small></div>
+                            <div><small>Produced at: {unit.Produced}</small></div>
+                            <div><small>Targets: {unit.Targets}</small></div>
+                            <div><small>{unit.Alive ? 'Alive' : 'Dead'}</small></div>
+                            <div><small>Status: {unit.Status}</small></div>
+                            {/* ask how to display subdoc here */}
+                        </Card.Text>
+                    </Card.Body>
+                    <Card.Footer>
+                        <>
+                            <Button>
+                                {/* edit and delete modals here */}
+                            </Button>
+                        </>
+                    </Card.Footer>
+                    {/* card footer and buttons go here */}
+                </Card>
+            </Container>
+        </>
     )
 }
 

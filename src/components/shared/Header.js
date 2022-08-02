@@ -8,43 +8,48 @@ const linkStyle = {
 }
 const authenticatedOptions = (
 	<>
-		<Nav.Link>
+		<Nav.Item class="m-2">
 			<Link to='change-password' style={linkStyle}>
 				Change Password
 			</Link>
-		</Nav.Link>
-		<Nav.Link>
+		</Nav.Item>
+		<Nav.Item class="m-2">
+			<Link to='/addUnit' style={linkStyle}>
+				Warp in Unit
+			</Link>
+		</Nav.Item>
+		<Nav.Item class="m-2">
 			<Link to='sign-out' style={linkStyle}>
 				Sign Out
 			</Link>
-		</Nav.Link>
+		</Nav.Item>
 	</>
 )
 
 const unauthenticatedOptions = (
 	<>
-        <Nav.Link>
+        <Nav.Item class="m-2">
 		    <Link to='sign-up' style={linkStyle}>Sign Up</Link>
-        </Nav.Link>
-        <Nav.Link>
+        </Nav.Item>
+        <Nav.Item class="m-2">
 		    <Link to='sign-in' style={linkStyle}>Sign In</Link>
-        </Nav.Link>
+        </Nav.Item>
 	</>
 )
 
 const alwaysOptions = (
 	<>
-		<Nav.Link>
+		<Nav.Item class="m-2">
 			<Link to='/' style={linkStyle}>
 				Home
 			</Link>
-		</Nav.Link>
+		</Nav.Item>
 	</>
 )
 
 const Header = ({ user }) => (
 	<Navbar bg='primary' variant='dark' expand='md'>
-		<Navbar.Brand>
+		<Navbar.Brand class="m-2">
             <Link to='/' style={linkStyle}>
                 Protoss Units
             </Link>
