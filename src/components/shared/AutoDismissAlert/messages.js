@@ -11,7 +11,7 @@ const messages = {
 	createUnitFailure: 'Something went wrong, construct additional pylons.',
 	updateUnitSuccess: 'Unit updated successfully!!',
 	updateUnitFailure: 'Couldn\'t update unit, please try again.',
-	removeUnitSuccess: 'Unit has been destroyed!',
+	removeUnitSuccess: 'Hey',
 	removeUnitFailure: 'Couldn\'t remove unit, please try again.',
 }
 

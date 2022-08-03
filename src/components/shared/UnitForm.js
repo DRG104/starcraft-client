@@ -51,6 +51,8 @@ const UnitForm = (props) => {
                     value={unit.Targets}
                     onChange={handleChange}
                 >
+
+                    <option>Select Attack Targets</option>
                     <option value="Ground">Ground</option>
                     <option value="Air">Air</option>
                     <option value="Ground / Air">Ground / Air</option>
@@ -63,7 +65,7 @@ const UnitForm = (props) => {
                     defaultValue={unit.Status}
                     onChange={handleChange}
                 >
-                    {/* <option>Status Options</option> */}
+                    <option>Unit is currently...</option>
                     <option value="Idle">Idle</option>
                     <option value="In-combat">In-combat</option>
                 </Form.Select>

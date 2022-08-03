@@ -96,7 +96,8 @@ const App = () => {
 					/>
 					<Route
 						path='/units/:id'
-						element={<ShowUnit 
+						element={<ShowUnit
+							user={user} 
 							msgAlert={msgAlert}
 							/>
 						}
